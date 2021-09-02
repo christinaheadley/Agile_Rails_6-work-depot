@@ -49,7 +49,7 @@ fixtures :products   #Rails already loaded per convention
 
       ok.each do |image_url| 
         assert new_product(image_url).valid?,
-          "#{image_url} shouldn't be invalid"
+          "#{image_url} should be valid"
       end
 
       bad.each do |image_url|
