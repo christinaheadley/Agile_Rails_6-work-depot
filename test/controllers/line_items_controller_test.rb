@@ -25,7 +25,8 @@ class LineItemsControllerTest < ActionDispatch::IntegrationTest
 
     assert_select 'h2', 'Your Cart'
     assert_select 'td', 'Programming Ruby 1.9'
-
+  end
+  
   test "should show line_item" do
     get line_item_url(@line_item)
     assert_response :success
