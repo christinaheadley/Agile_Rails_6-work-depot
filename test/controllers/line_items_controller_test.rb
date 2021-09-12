@@ -27,7 +27,7 @@ class LineItemsControllerTest < ActionDispatch::IntegrationTest
     assert_select 'td', 'Programming Ruby 1.9'
   end
 
-  test "should create line_item" via ajax do
+  test "should create line_item via ajax" do
     assert_difference('LineItem.count') do
       # post line_items_url, params: { line_item: { cart_id: @line_item.cart_id, product_id: @line_item.product_id } } updating bc added add to cart button and now directing to cart (where cart ID is internal states data residing in a cookie) instead of line items page
       post line_items_url, params: { product_id: products(:ruby).id }, xhr: true
